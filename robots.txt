@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kribu.io/sitemap.xml
