@@ -4,4 +4,12 @@
     <loc>https://kribu.io/</loc>
     <priority>1.00</priority>
   </url>
+  <url>
+    <loc>https://kribu.io/about.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://kribu.io/lanes.html</loc>
+    <priority>0.80</priority>
+  </url>
 </urlset>
