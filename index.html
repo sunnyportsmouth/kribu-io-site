@@ -3,149 +3,524 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kribu.io — AI that gives time back.</title>
-  <meta name="description" content="Kribu.io builds calm, human‑centered technology for professionals, families, and businesses. We also provide GenAI-enabled services that accelerate modernization for large corporations." />
+  <title>Kribu — Intelligent systems for modern life and work</title>
+  <meta name="description" content="Kribu explores AI-native systems across personal organization, operational continuity, and AI-enabled modernization. We build intelligent systems for modern life and work." />
   <meta name="theme-color" content="#0b0b10" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://kribu.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Kribu" />
+  <meta property="og:title" content="Kribu — Intelligent systems for modern life and work" />
+  <meta property="og:description" content="Kribu explores AI-native systems across personal organization, operational continuity, and AI-enabled modernization." />
+  <meta property="og:url" content="https://kribu.io/" />
+  <meta property="og:image" content="https://kribu.io/kribu-logo.png" />
+  <meta property="og:image:alt" content="Kribu logo" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kribu — Intelligent systems for modern life and work" />
+  <meta name="twitter:description" content="Kribu explores AI-native systems across personal organization, operational continuity, and AI-enabled modernization." />
+  <meta name="twitter:image" content="https://kribu.io/kribu-logo.png" />
+  <link rel="icon" type="image/png" href="kribu-logo.png" />
+  <link rel="apple-touch-icon" href="kribu-logo.png" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Kribu",
+      "url": "https://kribu.io/",
+      "logo": "https://kribu.io/kribu-logo.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/kribu-ai/"
+      ],
+      "description": "Kribu explores AI-native systems across personal organization, operational continuity, and AI-enabled modernization."
+    }
+  </script>
   <style>
     :root{
-      --bg:#0b0b10; --panel:#0f1117; --text:#e9edf2; --muted:#a9b1bd; --line:#1a2030;
-      --accent:#86f3ff; --accent2:#12d9ff; --ring:rgba(134,243,255,.25);
+      --bg:#0b0b10;
+      --paper:#11131a;
+      --ink:#ecf0f5;
+      --muted:#aab3bf;
+      --line:#1d2433;
+      --panel:#0f1219;
+      --accent:#86f3ff;
+      --accent2:#12d9ff;
+      --accent3:#7ee6c8;
+      --shadow:0 24px 70px rgba(0,0,0,.34);
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
+    html{scroll-behavior:smooth}
     body{
-      margin:0; color:var(--text);
-      background: radial-gradient(1200px circle at 10% -10%, #14172a 0, #0b0b10 60%),
-                 radial-gradient(1000px circle at 110% 10%, #0f1322 0, #0b0b10 60%);
-      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,"Helvetica Neue",Arial,sans-serif;
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      margin:0;
+      background:
+        radial-gradient(1200px circle at 10% -10%, #14172a 0, #0b0b10 60%),
+        radial-gradient(1000px circle at 110% 10%, #0f1322 0, #0b0b10 60%);
+      color:var(--ink);
+      font:16px/1.6 "Avenir Next","Segoe UI",Inter,Arial,sans-serif;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
-    .wrap{max-width:1040px;margin:0 auto;padding:28px}
-    .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
-    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
-    .brand img{width:34px;height:34px;border-radius:10px;box-shadow:0 0 0 6px var(--ring)}
-    .brand b{font-size:18px;letter-spacing:.2px}
-    .cta{display:flex;gap:10px;flex-wrap:wrap}
-    .btn{border:1px solid #222736;background:#10131c;color:var(--text);padding:9px 12px;border-radius:10px;text-decoration:none}
-    .btn:hover{border-color:#2f374f}
+    a{color:inherit}
+    .shell{max-width:1180px;margin:0 auto;padding:28px 22px 64px}
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:26px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      text-decoration:none;
+      color:var(--ink);
+    }
+    .brand-mark{
+      width:76px;
+      height:76px;
+      flex:0 0 76px;
+      border-radius:22px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.06);
+      box-shadow:var(--shadow);
+    }
+    .brand-mark img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      border-radius:22px;
+    }
+    .brand-copy{display:flex;flex-direction:column;gap:2px}
+    .brand-copy strong{font:700 17px/1.1 "Avenir Next","Segoe UI",sans-serif}
+    .brand-copy span{
+      color:var(--muted);
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .links{display:flex;gap:10px;flex-wrap:wrap}
+    .links a,.btn{
+      text-decoration:none;
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:10px 16px;
+      background:#10131c;
+      transition:.2s ease;
+    }
+    .links a:hover,.btn:hover{
+      transform:translateY(-1px);
+      border-color:#2f374f;
+      background:#131826;
+    }
+    .btn-primary{
+      background:var(--accent);
+      border-color:var(--accent);
+      color:#081116;
+    }
+    .btn-primary:hover{
+      background:#5fe8f8;
+      border-color:#5fe8f8;
+    }
+    .social-link{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
     .hero{
-      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0));
-      border:1px solid var(--line); border-radius:18px; padding:34px;
-      box-shadow:0 20px 60px rgba(0,0,0,.35); margin-bottom:18px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0)),
+        linear-gradient(135deg, rgba(134,243,255,.05), rgba(126,230,200,.04));
+      border:1px solid var(--line);
+      border-radius:36px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      position:relative;
     }
-    .kicker{color:var(--muted);text-transform:uppercase;letter-spacing:.18em;font-size:12px}
-    h1{font-size:clamp(34px,6vw,56px);line-height:1.08;margin:.35em 0}
-    p.sub{color:#c7d0db;font-size:clamp(16px,2.6vw,20px);max-width:860px}
-    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:26px}
-    .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
-    .card h3{margin:4px 0 6px;font-size:16px}
-    .muted{color:var(--muted);font-size:14px}
-    .section{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:12px}
-    .h2{font-size:22px;margin:4px 0 8px}
-    .h3{font-size:18px;margin:10px 0 6px}
-    .foot{margin:22px 0 6px;display:flex;gap:14px;flex-wrap:wrap;color:#8490a2;font-size:13px;align-items:center;justify-content:space-between}
-    .links{display:flex;gap:16px;flex-wrap:wrap}
-    .links a{color:#9fb1c7;text-decoration:none;border-bottom:1px solid transparent}
-    .links a:hover{border-color:#3c4b63}
-    @media (max-width:880px){ .grid{grid-template-columns:1fr} .top{gap:12px} }
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:auto -60px -60px auto;
+      width:220px;
+      height:220px;
+      background:radial-gradient(circle, rgba(18,217,255,.16), transparent 70%);
+    }
+    .hero-inner{
+      display:grid;
+      grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);
+      gap:24px;
+      padding:48px;
+    }
+    .eyebrow{
+      color:var(--accent);
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:12px;
+      font-weight:700;
+    }
+    h1,h2,h3{
+      font-family:"Iowan Old Style","Palatino Linotype","Book Antiqua",Georgia,serif;
+      font-weight:700;
+      letter-spacing:-.02em;
+      margin:0;
+    }
+    h1{
+      font-size:clamp(40px, 7vw, 78px);
+      line-height:.97;
+      margin-top:12px;
+    }
+    .lead{
+      color:#d5dde7;
+      font-size:clamp(17px, 2vw, 21px);
+      max-width:44rem;
+    }
+    .origin{
+      display:grid;
+      grid-template-columns:auto minmax(0,1fr) minmax(0,1fr) minmax(0,1.1fr);
+      gap:18px 26px;
+      align-items:center;
+      width:min(100%, 980px);
+      padding:18px 28px;
+      border-radius:28px;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(134,243,255,.18);
+      color:#d9e2ec;
+      font-size:14px;
+      margin-top:16px;
+    }
+    .origin strong{
+      color:var(--accent);
+      font-size:42px;
+      line-height:.95;
+      font-weight:700;
+      letter-spacing:-.03em;
+      font-family:"Avenir Next","Segoe UI",sans-serif;
+    }
+    .origin span,
+    .origin em{
+      font-size:28px;
+      line-height:1.22;
+    }
+    .origin em{
+      font-style:italic;
+    }
+    .vision{
+      margin-top:18px;
+      color:#b9c6d3;
+      font:600 15px/1.5 "Avenir Next","Segoe UI",sans-serif;
+      letter-spacing:.02em;
+    }
+    .button-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .side{display:grid;gap:14px;align-content:start}
+    .panel,.section,.card,.mini{
+      background:rgba(15,18,25,.9);
+      border:1px solid var(--line);
+      border-radius:24px;
+      box-shadow:var(--shadow);
+    }
+    .panel{padding:20px}
+    .panel strong{
+      display:block;
+      font-size:14px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--accent);
+      margin-bottom:8px;
+    }
+    .panel p{margin:0;color:#4f493f}
+    .panel p{margin:0;color:#c6d0dc}
+    .section{margin-top:18px;padding:28px}
+    .section h2{font-size:32px;margin-bottom:10px}
+    .section-intro{color:var(--muted);max-width:48rem;margin-bottom:18px}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .card{
+      padding:22px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02)),
+        linear-gradient(180deg, rgba(134,243,255,.03), rgba(126,230,200,.03));
+    }
+    .card h3{font-size:24px;margin-bottom:8px}
+    .card p{color:#c6d0dc;margin:0 0 14px}
+    .tag{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(134,243,255,.08);
+      color:var(--accent);
+      font-size:12px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      margin-bottom:12px;
+    }
+    .lane-note{color:#aeb8c5;font-size:15px;margin-top:8px}
+    .split{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:14px}
+    .mini{padding:20px}
+    .mini h3{font-size:22px;margin-bottom:10px}
+    .mini ul{margin:0;padding-left:18px;color:#c6d0dc}
+    .quote{
+      border-left:4px solid var(--accent3);
+      padding-left:16px;
+      color:#e5ecf4;
+      font-family:"Iowan Old Style","Palatino Linotype","Book Antiqua",Georgia,serif;
+      font-size:21px;
+    }
+    .foot{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+      padding:20px 4px 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .foot a{color:var(--muted);text-decoration:none}
+    .foot a:hover{text-decoration:underline}
+    @media (max-width:900px){
+      .nav{align-items:flex-start;flex-direction:column}
+      .hero-inner,.split,.grid{grid-template-columns:1fr}
+      .hero-inner{padding:30px}
+      h1{
+        font-size:clamp(34px, 11vw, 52px);
+        line-height:1.02;
+      }
+      .lead{
+        font-size:18px;
+      }
+      .button-row{
+        gap:10px;
+      }
+      .brand-mark,.brand-mark img{
+        width:68px;
+        height:68px;
+      }
+      .origin{
+        grid-template-columns:1fr;
+        gap:6px;
+        width:100%;
+        padding:18px 20px;
+      }
+      .origin strong{
+        font-size:30px;
+      }
+      .origin span,
+      .origin em{
+        font-size:20px;
+      }
+    }
+    @media (max-width:640px){
+      .shell{padding:20px 16px 48px}
+      .links{
+        width:100%;
+      }
+      .links a{
+        padding:9px 14px;
+      }
+      .hero{
+        border-radius:28px;
+      }
+      .hero-inner{
+        padding:24px;
+        gap:20px;
+      }
+      h1{
+        font-size:clamp(30px, 10.5vw, 42px);
+        line-height:1.04;
+      }
+      .lead{
+        font-size:16px;
+      }
+      .vision{
+        font-size:14px;
+      }
+      .origin{
+        padding:16px 18px;
+        border-radius:22px;
+      }
+      .origin strong{
+        font-size:26px;
+      }
+      .origin span,
+      .origin em{
+        font-size:18px;
+        line-height:1.24;
+      }
+      .section{
+        padding:22px;
+      }
+      .section h2{
+        font-size:28px;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header class="top">
-      <a class="brand" href="/"><img src="./kribu-logo.png" alt="Kribu logo" style="width:64px;height:auto;" /></a>
-      <nav class="cta">
-        
-        <a class="btn" href="#thesis">Thesis</a>
-        <a class="btn" href="#focus">Focus</a>
-        <a class="btn" href="#models">Engagement</a>
-        <a class="btn" href="#investors">Investors</a>
-        <a class="btn" href="mailto:hello@kribu.io?subject=Kribu%20Intro">Contact</a>
+  <div class="shell">
+    <header class="nav">
+      <a class="brand" href="index.html">
+        <div class="brand-mark"><img src="./kribu-logo.png" alt="Kribu logo" /></div>
+        <div class="brand-copy">
+          <strong>Kribu</strong>
+          <span>Artificial intellect for real life</span>
+        </div>
+      </a>
+      <nav class="links">
+        <a href="about.html">About</a>
+        <a href="lanes.html">Lanes</a>
+        <a class="social-link" href="https://www.linkedin.com/company/kribu-ai/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="mailto:hello@kribu.io?subject=Kribu%20Conversation">Contact</a>
       </nav>
     </header>
 
-    <main class="hero">
-      <div class="kicker">Technology Company</div>
-      <h1>AI that gives time back.</h1>
-      <p class="sub"><em>“Kribu” derives from Sanskrit <strong>kṛtrima buddhi</strong> — artificial intellect.</em></p>
-<p class="sub">Human‑centered technology for professionals, families, and businesses. We also deliver GenAI‑enabled services that accelerate modernization for large corporations.</p>
-      <div class="cta" style="margin-top:10px">
-        <a class="btn" href="mailto:hello@kribu.io?subject=Kribu%20Conversation">Start a conversation</a>
-        <a class="btn" href="#services">Explore our services</a>
-      </div>
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <div>
+            <div class="eyebrow">Kribu</div>
+            <h1>Intelligent systems for modern life and work.</h1>
+            <div class="origin">
+              <strong>Kribu</strong>
+              <span>comes from Sanskrit</span>
+              <em>kṛtrima buddhi</em>
+              <span>— artificial intellect.</span>
+            </div>
+            <p class="lead">
+              Kribu explores AI-native systems that help people and organizations think, coordinate, and operate more intelligently.
+              We are building toward a future where software does more than store work. It understands context, reduces friction, and helps life and business keep moving.
+            </p>
+            <p class="vision">
+              Our 2030 view: intelligent systems will become the operational layer beneath everyday life, enterprise continuity, and modernization itself.
+            </p>
+            <div class="button-row">
+              <a class="btn btn-primary" href="lanes.html">Explore our lanes</a>
+              <a class="btn" href="about.html">About Kribu</a>
+              <a class="btn" href="mailto:hello@kribu.io?subject=Kribu%20Conversation">Start a conversation</a>
+            </div>
+          </div>
+          <div class="side">
+            <div class="panel">
+              <strong>Parent Thesis</strong>
+              <p>The best AI systems do not ask for more attention. They absorb context, reduce friction, and increase human bandwidth.</p>
+            </div>
+            <div class="panel">
+              <strong>Where We Operate</strong>
+              <p>Personal AI systems, operational continuity systems, and modernization work that helps organizations move legacy software into modern architectures.</p>
+            </div>
+            <div class="panel">
+              <strong>How We Work</strong>
+              <p>Start with narrow wedges, build useful systems first, and push toward the long arc of intelligent coordination and execution.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="lanes">
+        <h2>The lanes we operate in</h2>
+        <p class="section-intro">
+          Kribu is building across three connected lanes. The site should communicate where we are headed without forcing visitors through a full product map too early.
+        </p>
+        <div class="grid">
+          <article class="card">
+            <div class="tag">Lane One</div>
+            <h3>Personal AI systems</h3>
+            <p>Systems that help individuals and households stay on track across reminders, follow-through, coordination, and everyday life administration.</p>
+            <p class="lane-note">The future is not more apps. It is more intelligent support built into daily life.</p>
+          </article>
+          <article class="card">
+            <div class="tag">Lane Two</div>
+            <h3>Operational continuity systems</h3>
+            <p>Operational systems that help organizations maintain continuity of execution when critical people, responsibilities, or workflows are in transition.</p>
+            <p class="lane-note">The future is not static documentation. It is intelligent control over what keeps work moving.</p>
+          </article>
+          <article class="card">
+            <div class="tag">Lane Three</div>
+            <h3>AI-enabled modernization</h3>
+            <p>Focused consulting for organizations modernizing legacy systems, upgrading core architectures, and using AI-assisted development to accelerate real transformation work.</p>
+            <p class="lane-note">The future is not AI theater. It is faster, cleaner modernization work grounded in real systems, real code, and real business outcomes.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="approach">
+        <div class="split">
+          <div class="mini">
+            <h3>Why these lanes fit together</h3>
+            <ul>
+              <li>All three focus on reducing recurring cognitive burden.</li>
+              <li>Each lane is about helping people stay coordinated when life or work gets fragmented.</li>
+              <li>They share one underlying belief: intelligent systems should help people operate, not just store information.</li>
+              <li>Kribu is interested in practical systems that become more useful as context, responsibility, and complexity increase.</li>
+            </ul>
+          </div>
+          <div class="mini">
+            <h3>What Kribu is interested in building</h3>
+            <ul>
+              <li>Systems that help individuals stay on top of life admin and follow-through.</li>
+              <li>Systems that help organizations maintain continuity when key people, obligations, or workflows shift.</li>
+              <li>Consulting and systems that help enterprises modernize legacy software, migrate to modern stacks, and use AI in ways that speed up execution without adding chaos.</li>
+              <li>Focused wedges that can mature into deeper products and long-term operating systems.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       <section class="section" id="thesis">
-        <div class="h2">Our Thesis</div>
-        <blockquote class="muted" style="margin:8px 0 12px">Great products feel like removing a pebble from your shoe — small, meaningful, and immediate.</blockquote>
-        <p class="muted">We pursue ideas where AI and automation save time without demanding attention. We’re interested in personal organization, business coordination, and corporate modernization. We ship small, learn fast, and iterate with users.</p>
+        <h2>What Kribu believes</h2>
+        <p class="quote">
+          We believe the next generation of software will not just record activity. It will understand context, anticipate friction, and help people and organizations operate with more intelligence. Kribu is building toward that future across life, work, and transition.
+        </p>
       </section>
-      
-      <section class="section" id="focus">
-        <div class="h2">Focus Areas</div>
+
+      <section class="section">
+        <h2>Why this matters now</h2>
+        <p class="section-intro">
+          The software people use every day still expects too much manual coordination. Work is fragmented across tools. Life admin is scattered across reminders, inboxes, calendars, and memory. Enterprises are under pressure to modernize, but most are still assembling AI in disconnected ways.
+        </p>
         <div class="grid">
           <article class="card">
-            <h3>Personal Productivity</h3>
-            <p class="muted">Organizes tasks, reminders, and follow-ups automatically — so nothing slips through the cracks</p>
+            <div class="tag">Now</div>
+            <h3>Context is finally usable</h3>
+            <p>AI can now work with richer context across tasks, communications, decisions, and workflows in ways that were not practical a few years ago.</p>
           </article>
           <article class="card">
-            <h3>Small Business Solutions</h3>
-            <p class="muted">No more chasing customers, missed calls, or unpaid invoices — Kribu does it automatically</p>
+            <div class="tag">Now</div>
+            <h3>Coordination is the real bottleneck</h3>
+            <p>The problem is often not missing software. It is the human burden of keeping everything aligned, transferred, followed up, and in motion.</p>
           </article>
           <article class="card">
-            <h3>Large Business Solutions</h3>
-            <p class="muted">Accelerates cloud and AI transformation while reducing complexity, risk, and cost at scale</p>
-          </article>
-        </div>
-      </section>
-    
-
-
-      <section class="section" id="models">
-        <div class="h2">Engagement Models</div>
-        <div class="grid">
-          <article class="card">
-            <h3>Venture Studio</h3>
-            <p class="muted">We originate and incubate new products end‑to‑end — from research to launch.</p>
-          </article>
-          <article class="card">
-            <h3>Build‑With</h3>
-            <p class="muted">Partner with founders and teams to co‑design and accelerate v1 builds.</p>
-          </article>
-          <article class="card">
-            <h3>Advisory</h3>
-            <p class="muted">Hands‑on consulting for corporations seeking AI adoption, modernization, or product strategy support.</p>
+            <div class="tag">Now</div>
+            <h3>Intelligent systems are becoming a layer</h3>
+            <p>The next wave will not just be new apps. It will also include smarter ways to rebuild legacy systems, accelerate migration work, and modernize the stack beneath the business.</p>
           </article>
         </div>
       </section>
 
-      <section class="section" id="investors">
-        <div class="h2">Investor Relations</div>
-        <div class="grid">
-          <article class="card">
-            <h3>What We’re Building</h3>
-            <p class="muted">An evolving portfolio of calm‑tech products and enterprise AI services. Initial projects target inbox & calendar prioritization, business coordination, and GenAI-enabled modernization pathways.</p>
-          </article>
-          <article class="card">
-            <h3>Why Now</h3>
-            <p class="muted">Consumer‑grade AI has crossed a usability threshold. There’s demand for trustworthy, private, and practical assistants — alongside enterprises seeking help with modernization and AI adoption.</p>
-          </article>
-          <article class="card">
-            <h3>Contact IR</h3>
-            <p class="muted">For investor updates or materials, email <a href="mailto:founder@kribu.io">founder@kribu.io</a>. We share brief quarterly updates and a one‑page thesis on request.</p>
-          </article>
+      <section class="section">
+        <h2>Start a conversation</h2>
+        <p class="section-intro">
+          If you are interested in where these lanes are going, or if you are working on adjacent problems in AI, continuity, or modernization, we would love to hear from you.
+        </p>
+        <div class="button-row">
+          <a class="btn btn-primary" href="mailto:hello@kribu.io?subject=Kribu%20Conversation">Email Kribu</a>
+          <a class="btn" href="https://www.linkedin.com/company/kribu-ai/" target="_blank" rel="noreferrer">Follow on LinkedIn</a>
         </div>
-      </section>
-
-      <section class="section" id="contact">
-        <div class="h2">Contact</div>
-        <p class="muted">Email us directly at: <a href="mailto:hello@kribu.io">hello@kribu.io</a></p>
       </section>
 
       <footer class="foot">
         <span>© <span id="y"></span> Kribu, LLC. All rights reserved.</span>
-        <div class="links">
+        <span>
+          Personal AI systems /
+          Operational continuity systems /
+          AI-enabled modernization
+        </span>
+        <span>
+          <a href="https://www.linkedin.com/company/kribu-ai/" target="_blank" rel="noreferrer">LinkedIn</a> ·
           <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a>
-        </div>
+        </span>
       </footer>
     </main>
   </div>
